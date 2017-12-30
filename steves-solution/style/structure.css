@@ -1,0 +1,301 @@
+/*
+Sections:
+General
+=start=
+=feature=
+=content=
+=site-nav=
+=global-site-nav=
+=global-nav=
+=footer=
+*/
+
+body, h1, h2, h3, p, ul, ol, fieldset, img
+{ margin: 0; padding: 0; border: 0; }
+
+body
+{
+	width: 75em;
+	margin: 0 auto;
+	padding: 2.8em 0 0;
+	position: relative;
+}
+
+strong.error
+{display: block;}
+
+h1
+{ float: left; margin-right: 0.2em;}
+
+.vcard ul
+{ list-style: none; }
+
+.vcard li
+{ display: inline; }
+
+/* =start= */
+
+#start
+{ 
+	clear: both;
+	border: 0.1em solid;
+	margin: 4.9em 0 0.1em;
+}
+
+#job-search
+{ 
+	float: left; 
+	padding: 0.8em 11.6em 0 1.4em;
+	/* Add margin to clear #find area */
+	margin-right: 0.9em;
+}
+
+#job-search h2
+{ margin-bottom: 0.9em; }
+
+#job-search form
+{ margin-right: 6.3em; }
+
+#job-search label, #job-search input, #job-search select
+{ 
+	display: block;
+	width: 100%;
+}
+
+#job-search input.submit
+{
+	width: auto;
+	margin: 1em 0 1.1em;
+	float: right;
+}
+
+#find
+{ 
+	float: left;
+	padding: 1.1em 0 0;
+}
+
+#find h2
+{ margin-bottom: 0.55em; }
+
+#my-hotjobs
+{
+	margin: 2.1em 0 0 1.9em;
+	padding: 0.8em 10.3em 1.1em 0.3em;
+	border: 1px solid;
+}
+
+#my-hotjobs li
+{ list-style: none; }
+
+#my-hotjobs h3
+{ margin: 0 0 0.2em 0.4em;}
+
+/* =/start= */
+
+/* =feature= */
+
+#feature
+{ clear: both; margin-bottom: 1em;}
+
+#feature p, #feature ul, #feature li
+{ display: inline; list-style: none; }
+
+#feature li
+{ padding: 0 0.4em; border-right: 0.1em solid; }
+
+#feature li.last-child
+{ border: 0; }
+
+/* =/feature= */
+
+/* =content= */
+
+#content
+{ margin-right: 300px; margin-bottom: 1em;}
+
+#content div
+{ clear: left;  margin-right: 1.5em;}
+
+#content div.first-child
+{ border-bottom: 0.1em solid; }
+
+#content div div
+{ clear: none; float: left; width: 47%; border: 0; margin: 0;}
+
+#content div.first-child div
+{ margin-bottom: 1em;}
+
+#content div.last-child
+{ margin-top: 1em; }
+
+#content h2
+{ margin-bottom: 0.45em; }
+
+#content form div, #content h3, #content .interested p
+{ float: none; display: inline;}
+
+#content .interested, #content .categories
+{ border-right: 0.1em solid; padding-right: 1em;}
+
+#content .interested h2
+{ margin-bottom: 0.85em; }
+
+#content input#email
+{ width: 11em;}
+
+#content .career-tools, #content .now-hiring
+{ margin-left: 1em;}
+
+#content .career-tools ul
+{
+	padding-left: 1em;
+	list-style: square;
+}
+
+#content .career-tools li
+{ margin-bottom: 0.6em; }
+
+#content .categories ul
+{ list-style: none; }
+
+#content .categories li
+{ margin: 0.3em 0; }
+
+#content .categories .more
+{ margin-top: 1em;}
+
+#content .now-hiring h3 img
+{ float: left; }
+
+#content .now-hiring h3, #content .now-hiring h3 img
+{ clear: left; }
+
+#content .now-hiring img, #content .now-hiring p
+{ margin-bottom: 1em; }
+
+/* =/content= */
+
+/* =site-nav= */
+#site-nav
+{
+	position: absolute;
+	top: 6.6em; left: 0;
+	width: 100%;
+	list-style: none;
+	border-left: 0.1em solid;
+}
+
+#site-nav li
+{ 
+	float: left;
+	border: 0.1em solid; 
+	width: 14%;
+	border-left: 0;
+	text-align: center;
+}
+
+#site-nav li a
+{
+	display: block;
+}
+
+#site-nav li.first-child
+{ width: 7%; }
+
+#site-nav li.last-child
+{ width: 22%;}
+
+/* =/site-nav= */
+
+/* =global-site-nav= */
+
+#global-site-nav
+{
+	position: absolute;
+	top: 3.9em; right: 0;
+	list-style: none;
+}
+
+#global-site-nav li
+{ display: inline; }
+
+#global-site-nav li.last-child
+{ margin-left: 0.6em;}
+
+/* =/global-site-nav= */
+
+/* =global-nav= */
+
+#global-nav
+{ 
+	position: absolute;
+	/* Use px here to match the stripe along the top (applied in color.css on the body)*/
+	top: 2px; left: 0;
+	width: 100%;
+	padding: 0.2em 0 0 0.1em;
+	/* Use px again, this time to match the bg image applied to #global-nav form (color.css) */
+	border-bottom: 2px solid;
+}
+
+#global-nav li
+{ 
+	display: inline; 
+	list-style: none; 
+	padding-left: 0.9em;
+}
+
+#global-nav form
+{
+	position: absolute;
+	top: 0; right: 0;
+	padding: 0.6em 0.6em 0.6em 5em;
+}
+
+#global-nav label
+{ 
+	width: 4em; 
+	/* Align the label with the textbox */
+	position: absolute; top: 1em; left: 1.2em;
+	/* HACK: Mozilla browsers don't support inline-block yet */
+	display: -moz-inline-block;
+	display: inline-block;
+}
+
+#global-nav input#p
+{ width: 6em; }
+
+/* =/global-nav= */
+
+/* =footer= */
+#footer
+{ 
+	clear: both;
+	text-align: center; 
+	border-top: 0.1em solid; 
+	padding-bottom: 1.1em;
+}
+
+#footer li
+{
+	display: inline;
+	padding: 0 0.4em;
+	border-right: 0.1em solid;
+}
+
+#footer li.last-child
+{ border: 0; }
+
+#footer .banner
+{ margin-bottom: 1.2em; }
+
+#footer .copyright
+{ margin-bottom: 0.8em; }
+
+#footer .copyright p, #footer .copyright ul
+{ display: inline; }
+
+#footer .copyright li
+{ padding: 0 0.6em; }
+
+/* =/footer= */

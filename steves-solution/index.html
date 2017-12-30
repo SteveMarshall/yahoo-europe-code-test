@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Yahoo! HotJobs - Thousands of jobs. Find the right one.</title>
+	<link rel="stylesheet" href="style/base.css" type="text/css" media="screen" />
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="style/iehacks.css" type="text/css" media="screen" />
+	<![endif]-->
+	<script type="text/javascript" src="script/eventManager.js"></script>
+	<script type="text/javascript" src="script/classManager.js"></script>
+	<script type="text/javascript" src="script/emailValidator.js"></script>
+</head>
+<!-- Body site id 
+	Specifying an id at the root of the DOM based on the site's URL allows users without per-site stylesheets to set their user stylesheets differently for varying sites. Further, may be assigned classes based on their path, if this is deemed useful to users.
+	Ideally, this id would be applied to the html element but, due to issues with IE, this is not a viable solution (as IE doesn't recognise ids or classes applied to the html element within CSS).
+-->
+<body id="hotjobs-yahoo-com" class="homepage">
+	<h1><img src="images/yhj-logo.gif" alt="Yahoo! HotJobs" /></h1>
+	
+	<div class="vcard">
+		<!-- hCard implied ‘nickname’ optimisation 
+			The hCard format states that, in the event that the values of the ‘fn’ and ‘org’ properties are not the same (or, I assume, one is missing), the value of the ‘fn’ property is one word, and that there is no explicit ‘n’ property, the content of the ‘fn’ property is treated as a ‘nickname’ property value.
+	http://microformats.org/wiki/hcard#Implied_.22nickname.22_Optimization
+		-->
+		<p>Welcome, <span class="fn">murrayrowan</span></p>
+		<ul>
+			<li>[<a href="#">Sign Out</a>,</li>
+			<li><a href="#">My Account</a>]</li>
+		</ul>
+	</div>
+	
+	<div id="start">
+		<div id="job-search">
+			<h2>Search For Jobs Across The Web <em class="new">New!</em></h2>
+			<form action="http://hotjobs.yahoo.com/jobseeker/jobsearch/search_results.html">
+				<fieldset>
+					<!-- HACK: Surfeit of divs 
+						To maintain sensible form layout in all browsers, I’ve wrapped label and input element pairs in divs. This could, alternatively, have been done by using some other combination of element (such as paragraphs, an unordered list, or an unordered list). 
+						It could be argued that use of a dl with dts and dds adds the most semantic value of these options because the user is, for their needs, defining the values of the form’s fields in their use. Further, some screen readers (such as JAWS) pronounce the word ‘equals’ between dts and their dds, so would pronounce [dt value] equals [dd value], where [dd value] would be some distinct identification of the input element, further emphasising the connection between the label and form field.
+						That said, the use of dls et al., in this instance, adds little to the user’s experience (due in large part to the simplicity of the form), and so have been omitted here.
+					-->
+					<div>
+						<label for="keywords_all"><em>Keywords</em> (<abbr title="example">e.g.</abbr> nurse, unix, or part-time)</label>
+						<input id="keywords_all" name="keywords_all" />
+					</div>
+					<div>
+						<label for="ulm_input1"><em>Location</em> (City &amp; State, or Zip)</label>
+						<input id="ulm_input1" name="ulm_input1" />
+					</div>
+					<div>
+						<label for="industry1"><em>Job Category</em></label>
+						<select id="industry1" name="industry1">
+							<!-- FIX: ‘Any’ job category made more obvious-->
+							<option selected="selected">Any</option>
+							<option value="FIN">Accounting/Finance</option>
+							<option value="ADV">Advertising/Public Relations</option>
+							<option value="ART">Arts/Entertainment/Publishing</option>
+							<option value="BAM">Banking/Mortgage</option>
+							<option value="ADM">Clerical/Administrative</option>
+							<option value="CON">Construction/Facilities</option>
+							<option value="CUS">Customer Service</option>
+							<option value="EDU">Education/Training</option>
+							<option value="ENG">Engineering/Architecture</option>
+							<option value="GOV">Government/Military</option>
+							<option value="HEA">Healthcare</option>
+							<option value="HOS">Hospitality/Travel</option>
+							<option value="HRS">Human Resources</option>
+							<option value="INS">Insurance</option>
+							<option value="NEW">Internet/New Media</option>
+							<option value="LAW">Law Enforcement/Security</option>
+							<option value="LEG">Legal</option>
+							<option value="MCO">Management Consulting</option>
+							<option value="MAN">Manufacturing/Operations</option>
+							<option value="MAR">Marketing</option>
+							<option value="NON">Non-Profit/Volunteer</option>
+							<option value="SCI">Pharmaceutical/Biotech</option>
+							<option value="RLE">Real Estate</option>
+							<option value="RFS">Restaurant/Food Service</option>
+							<option value="PUR">Retail</option>
+							<option value="SAL">Sales</option>
+							<option value="MIS">Technology</option>
+							<option value="TEL">Telecommunications</option>
+							<option value="TRA">Transportation/Logistics</option>
+							<option value="OTH">Other</option>
+						</select>
+					</div>
+					<!-- FIX: Standard submit buttons 
+					The provided hotjobsmock.png shows the submit buttons for the job search and newsletter subscription forms should be styled with rounded corners and subtle gradients on the edges. Personally, I don't feel that this is a good idea: the buttons don't offer the same degree of affordability as the standard OS controls, primarily because they aren't as readily identifiable as buttons within the user's OS.
+					That said, if the buttons are _required_ to be presented in this way, and this is seen to outweigh the potential usability benefits of standard OS controls, two options are available: use an <input type="image" /> pointing to an image of the appropriate button or style the button in a similar manner to that used below in #my-hotjobs. The former has the disadvantage that the buttons are then not scalable (because they're static images) and the latter that not all browsers allow styling of the UI widgets, although all  
+					-->
+					<input type="submit" value="Search" class="submit" />
+				</fieldset>
+			</form>
+		</div>
+	
+		<div id="find">
+			<h2>Find The Right One</h2>
+			<p><em>182,016</em> jobs added in the past 7 days</p>
+			<div id="my-hotjobs">
+				<h3>My HotJobs</h3>
+				<ul>
+					<!-- HACK: Force consistent li spacing in IE 
+						IE appears to have a bug with its spacing of lis in that, if the closing tag of an element is on a separate line to the opening tag of the next, the vertical spacing behaves erratically under some conditions. To counter this, we can either collapse the two onto one line (losing some clarity in the source) or simply move the closing > of the closing tag onto the same line as the opening tag of the next li.
+					-->
+					<li><a href="#" class="create-search">Create a Search</a></li
+					><li><a href="#" class="saved-jobs">0 Saved Jobs</a></li
+					><li><a href="#" class="post-resume">Post a resume</a></li>
+				</ul>
+				<!-- HACK: Rounded corners 
+					To generate rounded corners and the drop shadow on this box, I’m using a method I developed (with help from Ben Ward) in response to the various others that required multiple levels of nested containers around the content or used ‘sliding doors’ style images. This method may be very similar to others published in the wild, but I never actually got around to publicly documenting this, despite the fact that I first used it on my personal site almost a year ago.
+					The idea is that all the markup for visual hacks is placed inside the element being ‘styled’ (albeit indirectly), in a span with a class of ‘chrome’. The use of span means that no changes should be made to the flow of the document, even if margin-collapsing doesn’t get applied for some reason, with the class name indicating that the element contains purely visual markup, such that it is easier to identify should a time come when it may be removed.
+					The styling applied to these to achieve the full rounded corner and drop shadow effect required here is explained in style/chrome.css.
+				-->
+				<span class="chrome">
+					<!-- Chrome source order 
+						Source order is sides before corners to ensure that any overlap of the sides is covered by corners without requiring use of z-index in CSS 
+					-->
+					<span class="right"></span>
+					<span class="bottom"></span>
+					<span class="top-right"></span>
+					<span class="bottom-right"></span>
+					<span class="bottom-left"></span>
+					<span class="top-left"></span>
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="feature">
+		<p><em>Online Job Postings</em> in Areas Affected by Hurricane Katrina.</p><ul><!-- HACK: Force consistent li spacing in IE 
+				This hack is documented above.
+			--><li class="first-child"><a href="#">Find a Job</a></li
+			><li><a href="#">Post a Job at No Cost</a></li
+			><li class="last-child"><a href="#">More Katrina Resources</a></li>
+		</ul>
+	</div>
+
+	<div class="ad">
+		<h2>Advertisement</h2>
+		<a href="#ad-end" class="skip">Skip this advertisement</a>
+		<a href="#"><img src="images/ad.gif" alt="Be part of the next great revolution! Join palmOne! For a list of current opportunities please visit us online at: www.palmone.com" /></a>
+		<a id="ad-end" name="ad-end"></a>
+	</div>
+
+<div id="content">
+	<div class="first-child">
+		<div class="interested">
+			<h2>You may be interested in…</h2>
+			<h3>HotJobs Newsletters</h3>
+			<p>(<a href="#">View all</a>)</p>
+			<form action="#">
+				<fieldset>
+					<p>
+						Enter your <label for="email">email address</label>
+						<input name="email" id="email" class="email" />
+					</p>
+					<!-- FIX: Standard submit buttons 
+						This fix is documented above.
+					-->
+					<input type="submit" value="Subscribe" />
+				</fieldset>
+			</form>
+		</div>
+	
+		<div class="career-tools">
+			<h2>Career Tools</h2>
+			<ul>
+				<!-- HACK: Force consistent li spacing in IE 
+					This hack is documented above.
+				-->
+				<li><a href="#">Fast track your career.</a> Get a degree online.</li
+				><li><a href="#">Get a job-winning resume</a> by ResumeEdge.com</li>
+			</ul>
+		</div>
+	</div>
+	<div class="last-child">
+		<div class="categories">
+			<h2>Browse Categories</h2>
+			<ul>
+				<!-- HACK: Force consistent li spacing in IE 
+					This hack is documented above.
+				-->
+				<li><a href="#">Healthcare</a></li
+				><li><a href="#">Information Technology</a></li
+				><li><a href="#">Accounting/Finance</a></li
+				><li><a href="#">Sales</a></li
+				><li><a href="#">Diversity</a><em class="new">New!</em></li
+				><li class="more"><a href="#">More…</a></li>
+			</ul>
+		</div>
+	
+		<div class="now-hiring">
+			<h2>Now Hiring</h2>
+			<h3><a href="#"><img src="images/kaiser.gif" alt=""/>Kaiser Permanente</a></h3>
+			<p>Be Part of a Dedicated Team of Healthcare Professionals.</p>
+	
+			<h3><a href="#"><img src="images/siebel.gif" alt=""/>Siebel Systems <abbr title="Incorporated">Inc.</abbr></a></h3>
+			<p>Discover your true potential.</p>
+		</div>
+		</div>
+</div>
+
+	<ul id="site-nav">
+		<!-- HACK: Force consistent li spacing in IE 
+			This hack is documented above.
+		-->
+		<li class="selected first-child"><a href="#">Home</a></li
+		><li><a href="#">Job Search</a></li
+		><li><a href="#">My Searches</a></li
+		><li><a href="#">My Saved Jobs</a></li
+		><li><a href="#">My Resumes</a></li
+		><li><a href="#">Career Tools</a></li
+		><li class="last-child"><a href="#" class="employers">Employers &amp; Recruiters</a></li>
+	</ul>
+	
+	<ul id="global-site-nav">
+		<!-- HACK: Force consistent li spacing in IE 
+			This hack is documented above.
+		-->
+		<li><a href="#">HotJobs Home</a> -</li
+		><li class="last-child"><a href="#">Help</a></li>
+	</ul>
+	
+	<div id="global-nav">
+		<ul>
+			<!-- HACK: Force consistent li spacing in IE 
+				This hack is documented above.
+			-->
+			<li><a href="#">Yahoo!</a></li
+			><li><a href="#">My Yahoo!</a></li
+			><li><a href="#">Mail</a></li>
+		</ul>
+	
+		<form action="http://search.yahoo.com/search">
+			<fieldset>
+				<label for="p">Search the Web</label>
+				<input name="p" id="p" />
+				<!-- FIX: Standard submit buttons 
+					This fix is documented above.
+				-->
+				<input type="submit" value="Search" />
+			</fieldset>
+		</form>
+	</div>
+	
+	<div id="footer">
+		<p class="banner"><img src="images/yhj-news-footer.gif" alt="Yahoo! HotJobs"/> The latest news, developments and expert advice for professionals. <a href="#">Get Our Newsletter Now.</a></p>
+		
+		<ul>
+			<!-- HACK: Force consistent li spacing in IE 
+				This hack is documented above.
+			-->
+			<li><a href="#" class="canada">HotJobs Canada</a></li
+			><li><a href="#">Work at HotJobs</a></li
+			><li><a href="#">About HotJobs</a></li
+			><li><a href="#">Affiliate Program</a></li
+			><li class="last-child"><a href="#">Advertise on our Site</a></li>
+		</ul>
+	
+		<div class="copyright">
+			<p>Copyright &copy; 2005 Yahoo!. All rights reserved.</p><ul><!-- HACK: Force consistent li spacing in IE 
+					This hack is documented above.
+				--><li><a href="#">Guidelines</a></li
+				><li><a href="#">Terms of Service</a></li
+				><li class="last-child"><a href="#">Copyright/<acronym class="initialism" title="Intellectual Property">IP</acronym> Policy</a></li>
+			</ul>
+		</div>
+	
+		<p><em>Notice:</em> We collect personal information on this site.</p>
+		<p>To learn more about how we use your information, see our <a href="#">Privacy Policy</a>.</p>
+	</div>
+</body>
+</html>

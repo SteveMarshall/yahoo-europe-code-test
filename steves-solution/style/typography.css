@@ -1,0 +1,101 @@
+body
+{
+	/* The primary face on the page _isn't_ Arial or Helvetica, but these are the closest web-safe approximations I can find. */
+	font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+	/* Set font-size to 62.5% so that we can use 1em = 10px.
+	This assumes a browser default of font-size: 16px, as 16px * 0.625 = 10px */
+	font-size: 62.5%;
+}
+
+/* For some reason, these areas don’t use the same font as the rest of the page.
+For consistency within certain areas of the page, I’m not going to use this font in the ‘Now Hiring’ area of the page, where it is used for copy, or in the ‘View all’ link in the ‘You might be interested in…’ area. */
+em.new, .vcard, #my-hotjobs ul, #site-nav a, #global-site-nav, #footer
+{ font-family: Verdana, Tahoma, sans-serif; }
+
+
+em.new
+{
+	vertical-align: super;
+	font-style: normal;
+}
+
+.vcard .fn
+{ font-weight: bold;}
+
+#start form em, #find p, #find p em
+{ font-style: normal; font-weight: bold;}
+
+#start h2
+{ font-size: 2em; font-weight: normal;}
+
+#job-search h2
+{ font-size: 1.8em;font-weight: normal;}
+
+#job-search h2 em.new
+{ font-size: 0.7em; }
+
+#job-search form label
+{ font-size: 1.1em; line-height: 1.3em;}
+
+#find p
+{ font-size: 1.3em; }
+
+#my-hotjobs h3
+{ font-size: 1.6em; font-weight: normal;}
+
+#my-hotjobs li
+{ font-weight: bold; line-height: 2.1em;}
+
+#feature
+{ 
+	font-size: 1.2em;
+	text-align: center; 
+	font-weight: bold;
+	line-height: 2.1em;
+}
+
+#feature em
+{ font-style: normal; }
+
+#site-nav
+{ line-height: 2.3em;}
+
+#content h2
+{ font-size: 1.6em; font-weight: normal;}
+
+#content p, #content li
+{ font-size: 1.2em; }
+
+#content .interested a
+{ font-size: 0.8em; }
+
+#content .interested p
+{ line-height: 1.8em; }
+
+#content .now-hiring h3
+{ font-weight: normal; }
+
+#site-nav a
+{ font-size: 1.1em; font-weight: bold; text-decoration: none;}
+
+#global-nav
+{ line-height: 1.7em; }
+
+#global-nav label
+{ 
+	font-size: 0.9em;
+	line-height: 1.1em;
+	text-indent: -0.6em;
+}
+
+#footer
+{ line-height: 1.4em; }
+
+#footer em
+{ font-style: normal; text-transform: uppercase;}
+
+#footer .banner
+{ line-height: 2.5em; font-weight: bold;}
+
+#footer .banner img
+{ vertical-align: sub; }

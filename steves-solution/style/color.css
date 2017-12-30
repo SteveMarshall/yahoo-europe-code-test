@@ -1,0 +1,134 @@
+/* FIX: Off-white background colour
+It appears that the design has all 'white' areas as an off-white colour (#fefefe). These have been corrected to pure white (#fff) as this is more in keeping with the style of other Yahoo! sites.
+*/
+/* HACK: No :link, :visited, :active, or :hover styles
+Because all links within the page point to #, IE shows them as visited. To counter this, all anchor elements are set to use the same colour regardless of state.
+*/
+html
+{ background: #fff url(images/page-bar.gif) repeat-x top; }
+
+a
+{ color: #004bc9; }
+
+em.new
+{ color: #fa0030; }
+
+strong.error
+{ color: #fa0030;}
+
+#start
+{
+	color: #fff;
+	background: #53afe1;
+	border-color: #53afe1;
+}
+
+#job-search
+{
+	background: #caebfe url(images/man.jpg) no-repeat bottom right;
+}
+
+#job-search h2
+{ color: #0e8ac9; }
+
+#job-search form label
+{ color: #656565; }
+
+#job-search form label em
+{ color: #000; }
+
+#start p em
+{ color: #fcfe02; }
+
+#my-hotjobs
+{ 
+	color: #000; 
+	background: #b1dff6; 
+	border-color: #fff;
+}
+
+#my-hotjobs .create-search
+{
+	padding-left: 18px;
+	background: url(images/create-search.gif) no-repeat left;
+}
+
+#my-hotjobs .saved-jobs
+{
+	padding-left: 18px;
+	background: url(images/saved-jobs.gif) no-repeat left;
+}
+
+#my-hotjobs .post-resume
+{
+	padding-left: 18px;
+	background: url(images/post-resume.gif) no-repeat left;
+}
+
+#feature, #feature a
+{
+	color: #fff;
+	background: #1b4a9a;
+}
+
+#feature em
+{ color: #f8e660;}
+
+#content
+{ color: #4f4f4f; }
+
+#content div, #content div.first-child, #content div.first-child div, #content div.last-child div
+{ border-color: #b1b0b0; }
+
+#content h2
+{ color: #323232;}
+
+#site-nav, #site-nav li
+{ border-color: #96c9dc; }
+
+#site-nav li
+{ background: #108ac9 url(images/site-nav-bg.gif) repeat-x bottom;}
+
+#site-nav a
+{ color: #fff; }
+
+#site-nav li.selected, #site-nav li.selected a
+{
+	color: #004bc9;
+	background: #f4f4f4;
+}
+
+#site-nav li .employers
+{
+	background: #1b4a99 url(images/site-nav-employers-bg.gif) repeat-x bottom;	
+}
+
+#global-nav, #global-nav a
+{
+	color: #000;
+	background: #eee; 
+	border-color: #ddd;
+}
+
+#global-nav form
+{
+	background: #eee url(images/global-nav-search-bg.gif) no-repeat bottom left;
+}
+
+#footer
+{
+	border-color: #cbcbcb;
+	background: #eee;
+}
+
+#footer .canada
+{ 
+	padding-left: 20px;
+	background: url(images/canada.gif) no-repeat;
+}
+
+#footer .banner, #footer .banner a
+{
+	color: #fff;
+	background: #108ac9;
+}

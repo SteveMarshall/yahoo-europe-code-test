@@ -1,0 +1,27 @@
+/* HACK: Self clearing floats/containers
+http://www.positioniseverything.net/easyclearing.html
+*/
+#start:after
+{
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+#content div:after
+{
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: left; 
+    visibility: hidden;
+}
+
+#start, #content  div {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html #start, * html #content  div {height: 1%;}
+#start, #content  div {display: block;}
+/* End hide from IE-mac */

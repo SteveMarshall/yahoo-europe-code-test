@@ -1,0 +1,34 @@
+.ad, .ad h2, .ad .skip
+{ margin: 0; padding: 0; }
+
+/* Position the ad block relatively but with no position to allow absolute positioning relative to the ad block */
+.ad
+{
+	float: right;
+	text-align: center;
+	position: relative;
+	margin-bottom: 1.2em;
+}
+
+.ad h2
+{
+	font-size: 0.9em;
+	line-height: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 0.4em;
+}
+
+/* Hide the skip link unless the ad receives focus or is hovered over */
+.ad .skip
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: #00e;
+	color: #fff;
+}
+
+.ad:hover .skip, .ad:focus .skip
+{ display: block; }

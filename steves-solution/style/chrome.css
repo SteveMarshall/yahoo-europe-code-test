@@ -1,0 +1,51 @@
+/* HACK: Rounded corners
+As noted in index.html, all our styling hooks are stored inside the element to be styled in a span.chrome, each having a presentational class name (e.g. top-left).
+	To position these, the container is positioned relatively (assuming it has not already been positioned absolutely) with no changes to its positioning. This causes the container, the element to be rounded, to be treated as the origin for all absolutely positioned elements contained within it.
+	With that applied, we can then position the chrome elements accordingly, taking into account their locations relative to the already-applied border.
+	This method is further optimised by using a single image to contain all images for the corners, built in such a way that we can simply mask the other corners by specifying a background position and a size for the corner box.
+*/
+
+#my-hotjobs
+{ position: relative; }
+
+#my-hotjobs .chrome .top-left
+{
+	position: absolute; left: -1px; top: -1px;
+	width: 5px; height: 5px;
+	background: url(images/hotjobs-corners.png) repeat-y top left;
+}
+
+#my-hotjobs .chrome .top-right
+{
+	position: absolute; right: -3px; top: -1px;
+	width: 5px; height: 5px;
+	background: url(images/hotjobs-corners.png) no-repeat top right;
+}
+
+#my-hotjobs .chrome .right
+{
+	position: absolute; right: -3px; top: 0px;
+	width: 5px; height: 100%;
+	background: url(images/hotjobs-right.png) repeat-y right;
+}
+
+#my-hotjobs .chrome .bottom-left
+{
+	position: absolute; left: -1px; bottom: -3px;
+	width: 5px; height: 5px;
+	background: url(images/hotjobs-corners.png) no-repeat bottom left;
+}
+
+#my-hotjobs .chrome .bottom
+{
+	position: absolute; left: 0; bottom: -3px;
+	width: 100%; height: 5px;
+	background: url(images/hotjobs-bottom.png) repeat-x bottom;
+}
+
+#my-hotjobs .chrome .bottom-right
+{
+	position: absolute; right: -3px; bottom: -3px;
+	width: 5px; height: 5px;
+	background: url(images/hotjobs-corners.png) no-repeat bottom right;
+}

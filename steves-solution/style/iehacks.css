@@ -1,0 +1,62 @@
+/* HACK: Force a width for the #job-search, or IE makes it 100% */
+#job-search
+{width: 32em;}
+
+/* HACK: input.submit doesn't float: right properly */
+#job-search input.submit
+{position: relative; left: 5em;}
+
+/* HACK: Fix chrome positioning within #my-hotjobs
+position: relative seems to throw all the chrome positioned at the bottom down by 68px. position: absolute seems to fix this with no obvious problems.
+*/
+#my-hotjobs
+{ position: absolute; }
+
+/* HACK: IE Inline box height can't be less than font-size */
+#my-hotjobs .chrome *
+{ font-size: 1px; }
+
+/* HACK: IE box model makes 100% = content area size
+There is a way, using some extra JavaScript, that I could fix this issue, but I'm assuming that the styling was meant to be done using 'pure' CSS. 
+*/
+#my-hotjobs .chrome .right
+{ font-size: 9em;}
+
+#my-hotjobs .chrome .bottom
+{ width: 121%; }
+
+/* HACK: IE doesn't like border-right
+For some reason, IE doesn't appear to want to render border-right, so zero it and apply the border on the left instead.
+*/
+#feature li, #feature li.last-child
+{ border-left-width: 1px; border-left-style: solid; border-right: 0;}
+
+#feature li.first-child
+{ border-left: 0; }
+
+#content div.first-child
+{ padding-bottom: 1em; }
+
+/* HACK: #content h3s are given font-size: 1.8em by default, despite this being overridden elsewhere */
+#content h3
+{ font-size: 1.2em;}
+
+/* HACK:Fix newsletter subscription layout */
+#content form p
+{ display: inline;}
+
+#content form
+{ margin: 0;}
+
+#content input#email.email
+{ width: 7.5em; }
+
+/* HACK: Fix #global-nav form box model issues */
+#global-nav form
+{padding-right: 0;}
+
+#global-nav form label
+{ text-indent: 0; }
+
+#global-nav fieldset
+{ width: 16em; padding: 0;}
